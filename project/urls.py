@@ -37,11 +37,6 @@ admin.AdminSite.site_title = 'Saúde Mental API'
 admin.AdminSite.index_title = 'Saúde Mental API'
 
 
-if get_settings().USE_PLACEHOLDERS:
-    urlpatterns += [
-        path("_pictures/", include("pictures.urls")),
-    ]
-
 if settings.DEBUG:
     urlpatterns += static(
         settings.MEDIA_URL,

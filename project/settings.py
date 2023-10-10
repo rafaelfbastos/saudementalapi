@@ -128,23 +128,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-PICTURES = {
-    "BREAKPOINTS": {
-        "xs": 576,
-        "s": 768,
-        "m": 992,
-        "l": 1200,
-        "xl": 1400,
-    },
-    "GRID_COLUMNS": 12,
-    "CONTAINER_WIDTH": 1200,
-    "FILE_TYPES": ["WEBP"],
-    "PIXEL_DENSITIES": [1, 2],
-    "USE_PLACEHOLDERS": True,
-    "QUEUE_NAME": "pictures",
-    "PROCESSOR": "pictures.tasks.process_picture",
 
-}
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

@@ -1,5 +1,5 @@
 from django.db import models
-from pictures.models import PictureField
+from stdimage import StdImageField
 
 
 class Pills(models.Model):
@@ -43,7 +43,7 @@ class Phones(models.Model):
 class Information(models.Model):
     title = models.CharField('Título', max_length=255)
     text = models.TextField('Texto')
-    img = PictureField('imagem', null=True, upload_to='img/', blank=True)
+    img = StdImageField('imagem', null=True, upload_to='img/', blank=True)
     themeColor = models.CharField('cor', null=True, blank=True)
     createDate = models.DateTimeField(auto_now_add=True)
 
