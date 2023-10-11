@@ -24,18 +24,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY', 'change-me')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = bool(int(os.getenv('DEBUG', 1)))
-DEBUG = True
+DEBUG = bool(int(os.getenv('DEBUG', 1)))
+
 
 ALLOWED_HOSTS = [
-    h.strip() for h in os.getenv('ALLOWED_HOSTS', '').split(',')
-    if h.strip()
+  " https://saudementalapi.onrender.com"
 
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    h.strip() for h in os.getenv('CSRF_TRUSTED_ORIGINS', '').split(',')
-    if h.strip()
+   " https://saudementalapi.onrender.com"
 ]
 
 # Application definition
