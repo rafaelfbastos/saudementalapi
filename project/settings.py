@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-wr1zvq))5^giyy%au3rinb1^u2c1&i#(1pgjuk@5dv15xp72!*"
+SECRET_KEY = os.getenv('SECRET_KEY', 'change-me')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -97,13 +97,13 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': "django.db.backends.postgresql",
-        'NAME': "saudeapi",
-        'USER': "django",
-        'PASSWORD': "fGP4kzi32N1mZhyjimr8Aepk0OPZJu1y",
-        'HOST': "dpg-ckbqtmsiibqc73ckg4tg-a",
-        'PORT': "5432",
+     'default': {
+        'ENGINE': os.getenv('DB_ENGINE', 'change-me'),
+        'NAME': os.getenv('POSTGRES_DB', 'change-me'),
+        'USER': os.getenv('POSTGRES_USER', 'change-me'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD', 'change-me'),
+        'HOST': os.getenv('POSTGRES_HOST', 'change-me'),
+        'PORT': os.getenv('POSTGRES_PORT', 'change-me'),
     }
 }
 
