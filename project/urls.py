@@ -20,7 +20,7 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 from core.views import index , error_404
-from pictures.conf import get_settings
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
