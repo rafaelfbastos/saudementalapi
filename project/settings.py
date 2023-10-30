@@ -28,12 +28,11 @@ DEBUG = False
 
 
 ALLOWED_HOSTS = [
-  " https://saudementalapi.onrender.com","saudementalapi.onrender.com"
-
+    h.strip() for h in os.environ["ALLOWED_HOSTS"].split(",") if h.strip()
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-   " https://saudementalapi.onrender.com","saudementalapi.onrender.com"
+    h.strip() for h in os.environ["CSRF_TRUSTED_ORIGINS"].split(",") if h.strip()
 ]
 
 # Application definition
